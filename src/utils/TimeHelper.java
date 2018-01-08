@@ -12,9 +12,9 @@ import java.util.*;
  *
  * @author deema Класс для работы с датой и временем.
  */
-public class Time {
+public class TimeHelper {
 
-    public Time() {
+    public TimeHelper() {
     }
 
     /**

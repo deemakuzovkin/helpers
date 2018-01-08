@@ -27,10 +27,41 @@ public class TimeTest {
     public void testToPalomarsTime() {
         System.out.println("ToPalomarsTime");
         Calendar calendar = Calendar.getInstance();
+        calendar.set(0, 0, 1, 4, 35, 35);
+        calendar.set(Calendar.MILLISECOND, 0);
         Date time = calendar.getTime();
-        int expResult = 31;
+        int expResult = 283535;
         int result = Time.ToPalomarsTime(time);
         assertEquals(expResult, result);
     }
-    
+
+    /**
+     * Test of WithoutSeconds method, of class Time.
+     */
+    @Test
+    public void testWithoutSeconds() {
+        System.out.println("WithoutSeconds");
+        int time = 283535;
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(0, 0, 1, 4, 35, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        Date expResult = calendar.getTime();
+        Date result = Time.WithoutSeconds(time);
+        assertEquals(expResult.getTime(), result.getTime());
+    }
+
+    /**
+     * Test of NormalTime method, of class Time.
+     */
+    @Test
+    public void testNormalTime() {
+        System.out.println("NormalTime");
+        int number = 285959;
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(0, 0, 1, 4, 59, 59);
+        calendar.set(Calendar.MILLISECOND, 0);
+        Date expResult = calendar.getTime();
+        Date result = Time.NormalTime(number);
+        assertEquals(expResult.getTime(), result.getTime());
+    }
 }

@@ -20,8 +20,7 @@ public class TimeTest {
     }
 
     /**
-     * Test of IntDateTime method, of class Time.
-     * adsfasdf
+     * Test of IntDateTime method, of class TimeHelper.
      */
     @Test
     public void testIntDateTime() {
@@ -30,12 +29,12 @@ public class TimeTest {
         cl.set(2017, 11, 1, 0, 0, 0);
         Date input = cl.getTime();
         int expResult = 20171201;
-        int result = Time.IntDateTime(input);
+        int result = TimeHelper.IntDateTime(input);
         assertEquals(expResult, result);
     }
 
     /**
-     * Test of NormalDateTime method, of class Time.
+     * Test of NormalDateTime method, of class TimeHelper.
      */
     @Test
     public void testNormalDateTime() {
@@ -45,38 +44,38 @@ public class TimeTest {
         cl.set(Calendar.MILLISECOND, 0);
         int input = 20171201;
         Date expResult = cl.getTime();
-        Date result = Time.NormalDateTime(input);
+        Date result = TimeHelper.NormalDateTime(input);
         assertEquals(expResult.getTime(), result.getTime());
     }   
 
     /**
-     * Test of GetDaysByActualYear method, of class Time.
+     * Test of GetDaysByActualYear method, of class TimeHelper.
      */
     @Test
     public void testGetDaysByActualYear() {
         System.out.println("GetDaysByActualYear");
         int expResult = 365;
-        ArrayList<Integer> result = Time.GetDaysByActualYear();
+        ArrayList<Integer> result = TimeHelper.GetDaysByActualYear();
         assertEquals(expResult, result.size());
     }
 
     /**
-     * Test of GetSignificantMinuts method, of class Time.
+     * Test of GetSignificantMinuts method, of class TimeHelper.
      */
     @Test
     public void testGetSignificantMinuts() {
         System.out.println("GetSignificantMinuts");
         int inputDur = 90;
         int expResult = 120;
-        int result = Time.GetSignificantMinuts(inputDur);
+        int result = TimeHelper.GetSignificantMinuts(inputDur);
         assertEquals(expResult, result);
         inputDur = 15;
         expResult = 60;
-        result = Time.GetSignificantMinuts(inputDur);
+        result = TimeHelper.GetSignificantMinuts(inputDur);
         assertEquals(expResult, result);
         short inputShortDur = 35;
         expResult = 60;
-        result = Time.GetSignificantMinuts(inputShortDur);
+        result = TimeHelper.GetSignificantMinuts(inputShortDur);
         assertEquals(expResult, result);
     }
 }

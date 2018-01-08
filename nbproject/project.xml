@@ -11,5 +11,42 @@
                 <root id="test.src.dir"/>
             </test-roots>
         </data>
+        <spellchecker-wordlist xmlns="http://www.netbeans.org/ns/spellchecker-wordlist/1">
+            <word>без</word>
+            <word>Возвращение</word>
+            <word>временем</word>
+            <word>времени</word>
+            <word>времение</word>
+            <word>время</word>
+            <word>дата</word>
+            <word>даты</word>
+            <word>Длительности</word>
+            <word>для</word>
+            <word>до</word>
+            <word>из</word>
+            <word>календарь</word>
+            <word>Класс</word>
+            <word>класса</word>
+            <word>ко</word>
+            <word>Конструктор</word>
+            <word>нормального</word>
+            <word>Нормальное</word>
+            <word>нормальному</word>
+            <word>объектами</word>
+            <word>от</word>
+            <word>паломарс</word>
+            <word>Паломарсе</word>
+            <word>Преобразование</word>
+            <word>Преобразовать</word>
+            <word>Приведение</word>
+            <word>работы</word>
+            <word>Результат</word>
+            <word>секунд</word>
+            <word>со</word>
+            <word>Текущая</word>
+            <word>Тестирование</word>
+            <word>формата</word>
+            <word>числового</word>
+        </spellchecker-wordlist>
     </configuration>
 </project>
